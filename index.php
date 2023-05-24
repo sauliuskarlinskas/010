@@ -88,3 +88,94 @@ switch ($p) {
 }
 
 echo "<h1>$animal</h1>";
+
+// Masyvai
+//$m1 = array(); // senas uzrasymas - nerasyti
+
+$m1 = ['labas'=>'bebras', 'lape', '--' =>'ziurke']; // teisingai
+
+//array_push($m1, 'kiskis'); // nenaudotinas
+
+$m1[] = 'barsukas'; // ideda sekanciu nariu
+
+$m1[20] = 'vilkas'; //ideda tuo indeksu kuriuo parasytas
+
+print_r($m1);
+
+array_unshift($m1, 'seskas');
+
+print_r($m1);
+
+print_r(array_values($m1));    //pataisyt masyvui
+
+
+$colors = ['red', 'green', 'blue', 'yellow'];
+
+
+//foreach ($colors as $key => $value) {   //pavercia juodu
+  //  $colors[$key] = 'black';
+//}
+
+//foreach ($colors as &$color) {   //pavercia juodu,  &-priskyrimas palei nuoroda, perduoda kintamaji
+//$color = 'black';
+//}
+
+
+foreach ($colors as &$value) {} // perrasomas paskutinis elementas
+
+unset($value); //pataiso arba nenaudot to pacio vardo
+
+
+foreach ($colors as $value) {
+   echo 'Reikšmė: ' . $value . '<br>';
+}
+ print_r($colors);
+
+
+ for ($x = 1; $x <= 5; $x++) {
+    echo 'Numeris: '.$x.' <br>';
+ }
+
+ echo '<pre>';
+
+ foreach (range(1, 5) as $x) {
+    echo 'Numeris: '.$x.' <br>';
+ }
+
+ $m2 = [
+    [5, 6, 9],
+    [32, 25, 98],
+    [123, 258, 987]
+ ];
+
+ print_r($m2);
+
+
+ foreach($m2 as $value) {
+
+    if (is_array($value)) {
+        foreach($value as $digit) {
+            if (is_integer($digit)) {
+             $sum += $digit; 
+            }
+        
+        }
+    }
+    else {
+        if (is_infinite($value)) {
+            $sum += $value;
+         }
+    }
+ }
+
+    print_r($sum);
+
+    echo '<pre>';
+
+    define('BRIEDIS', 'Briedis miega');  //constanta padifainta
+
+    var_dump(defined(BRIEDIS));
+    echo BRIEDIS;
+    
+//file_put_contents('miskas.txt', BRIEDIS. "\n", FILE_APPEND);    // irasimas
+
