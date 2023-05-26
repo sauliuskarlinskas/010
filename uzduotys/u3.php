@@ -160,3 +160,56 @@ for ($y=1 ; $y<=11*4; $y++){
     echo "<br>";
 }
 echo "</div>";
+
+
+echo '<pre>';
+echo '-------10-------<br>';
+
+function smugis($min, $max) {
+    return rand($min, $max) / 10;
+  }
+  
+  function arPataike() {
+    return rand(1, 100) <= 50;
+  }
+  
+  function kalimasMazaisSmugiais() {
+    $viniesIlgis = 8.5;
+    $smugiuSkaicius = 0;
+    $ikalimoGylis = 0;
+  
+    while ($ikalimoGylis < $viniesIlgis) {
+      $smugis = smugis(5, 20);
+      $ikalimoGylis += $smugis;
+      $smugiuSkaicius++;
+    }
+  
+    return $smugiuSkaicius;
+  }
+  
+  function kalimasDideliaisSmugiais() {
+    $viniesIlgis = 8.5;
+    $smugiuSkaicius = 0;
+    $ikalimoGylis = 0;
+  
+    while ($ikalimoGylis < $viniesIlgis) {
+      $smugis = smugis(20, 30);
+  
+      if (arPataike()) {
+        $ikalimoGylis += $smugis;
+      }
+  
+      $smugiuSkaicius++;
+    }
+  
+    return $smugiuSkaicius;
+  }
+  
+  // Įkalkime vinis mažais smūgiais
+  $smugiuSkaiciusMazais = kalimasMazaisSmugiais();
+  echo "Vinies įkalimas mažais smūgiais: {$smugiuSkaiciusMazais} smūgiai.\n";
+  
+  // Įkalkime vinis dideliais smūgiais
+  $smugiuSkaiciusDideliais = kalimasDideliaisSmugiais();
+  echo "Vinies įkalimas dideliais smūgiais: {$smugiuSkaiciusDideliais} smūgiai.\n";
+  
