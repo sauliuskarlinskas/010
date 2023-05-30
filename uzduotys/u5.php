@@ -87,5 +87,58 @@ print_r($elementSum);
 
 
 echo '<pre>';
-echo '-------3-------<br>';
+echo '-------3-------<br>';  // nebaigtas
+
+$m2 = [];
+
+for ($i = 0; $i < 10; $i++) {
+    $kiek = rand(2, 20);
+    $elemet = [];
+
+    for ($a = 0; $a < $kiek; $a++) {
+        $element = chr(rand(65, 90));
+    }
+    $m2[] = $element;
+}
+
+
+
+
+
+echo '<pre>';
+echo '-------5-------<br>';
+
+$m3 = [];
+
+for ($i = 0; $i < 30; $i++) {
+    $user_id = rand(1, 1000000);
+    $place_in_row = rand(0, 100); 
+
+    $elementas = [
+        'user_id' => $user_id,
+        'place_in_row' => $place_in_row
+    ];
+
+    $m3[] = $elementas;
+}
+
+print_r($m3);
+
+echo '<pre>';
+echo '-------6-------<br>';
+
+// Rūšiavimas pagal user_id didėjančia tvarka
+
+usort($m3, fn($a, $b) => $a['user_id'] <=> $b['user_id']);
+
+print_r($m3);
+
+
+echo '<pre>';
+echo '--------------<br>';
+// Rūšiavimas pagal place_in_row mažėjančia tvarka
+
+usort($m3, fn($a, $b) => $b['place_in_row'] <=> $a['place_in_row']);
+
+print_r($m3);
 
