@@ -24,10 +24,14 @@ two( 'du', 2 );
 echo '<pre>';
 echo '-------3-------<br>';
 
-//$stringas = md5( time() );
-// generuoja atsitiktini stringa
+$stringas = md5( time());
+//generuoja atsitiktini stringa
 
-//echo preg_replace_callback( $stringas );
+$stringas = preg_replace_callback('/\d+/', fn($m) => '<h1>'.$m[0].'</h1>' , $stringas);
+
+echo $stringas;
+
+
 
 echo '<pre>';
 echo '-------4-------<br>';
@@ -74,8 +78,27 @@ usort($m1, function($a, $b) {
 return dalijasiBeLiekanos($b) - dalijasiBeLiekanos($a);
 });
 
-print_r($m1);
+//print_r($m1);
 
+//kitas budas
+$m2 = [];
+
+foreach(range(1, 100) as $_) {
+    $digit = [
+        'value' => rand(33, 77)
+    ];
+    $arr[] = $digit;
+}
+
+foreach ($arr as &$digit) {
+    $digit['div'] = rand(1, 11);
+}
+
+usort($arr, fn($a, $b) => $b['div'] <=> $a['div']);
+
+echo '<pre>';
+echo '--------------<br>';
+print_r($arr);
 
 echo '<pre>';
 echo '-------6-------<br>';
