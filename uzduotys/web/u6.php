@@ -1,14 +1,3 @@
-<?php
-
-$page = (int) ($_GET['p'] ?? 1);
-
-if (!in_array($page, [1, 2])) {
-    header('Location: http://localhost/zuikiai/010/uzduotys/web/u6.php');
-    die();
-}
-
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,28 +6,21 @@ if (!in_array($page, [1, 2])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background edition</title>
+    <title>u6</title>
+    
 </head>
 
-<?php if ($page == 1): ?>
-
-<body style="background-color:green;">
-
-<?php elseif ($page == 2): ?>
-
-    <body style="background-color:yellow;">
-
-    <?php endif ?>
+    <body style=background:<?= isset($_GET['color']) && $_GET['color'] == 1 ? 'yellow' : 'green' ?> >
+            
 
     <fieldset>
-
         <form>
             <div>
-                <label>GET </label>
+                <label>GET</label>
                 <input type="text">
             </div>
             <div>
-                <button type="submit">Green</button>
+                <a href="http://localhost/zuikiai/010/uzduotys/web/u6.php">Green</a>
             </div>
 
         </form>
@@ -52,7 +34,7 @@ if (!in_array($page, [1, 2])) {
                 <input type="text">
             </div>
             <div>
-                <button type="submit">Yellow</button>
+                <a href="http://localhost/zuikiai/010/uzduotys/web/u6.php?color=1">Yellow</a>
             </div>
 
         </form>
