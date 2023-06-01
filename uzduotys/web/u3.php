@@ -1,12 +1,7 @@
 <?php
 
-$page = (int) ($_GET['p'] ?? 1);
 
-if (!in_array($page, [1, 2])) {
-    header('Location: http://localhost/zuikiai/010/uzduotys/web/u2.php');
-    die();
-}
-$color = "color";
+$color = $_GET['color'] ?? 'black';
 
 ?>
 
@@ -20,27 +15,17 @@ $color = "color";
     <title>Background edition</title>
 </head>
 
-
-<?php if ($page == 1): ?>
-
-<body style="background-color:black;">
-
-<?php elseif ($page == 2): ?>
-
-    <body style="background-color:$color">
-
-    <?php endif ?>
+<body style="background-color:<?= $color ?>;">
 
     <div>
         <nav>
-            <a href="http://localhost/zuikiai/010/uzduotys/web/u2.php?p=1"
-                style="font-size:20px; font-weight:bold;">black</a>
+            <a href="http://localhost/zuikiai/010/uzduotys/web/u3.php?color=black" style="font-size:20px; font-weight:bold;">black</a>
         </nav>
         <fieldset style="background-color:grey;">
-            <form>
+            <form action="http://localhost/zuikiai/010/uzduotys/web/u3.php">
                 <div>
                     <label>color: </label>
-                    <input type="text" name="color">
+                    <input type="text" name='color'>
                 </div>
                 <div>
                     <button type="submit">GET</button>

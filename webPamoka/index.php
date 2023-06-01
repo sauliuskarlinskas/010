@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     file_put_contents(__DIR__ . '/memo.ser', serialize([$what, $color]));
 
-    header('Location: http://localhost/zuikiai/010/web/');
+    header('Location: http://localhost/zuikiai/010/webPamoka/');
     die();
 
 } else {

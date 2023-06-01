@@ -3,7 +3,7 @@
 $page = (int) ($_GET['p'] ?? 1);
 
 if (!in_array($page, [1, 2])) {
-    header('Location: http://localhost/zuikiai/010/uzduotys/web/.php');
+    header('Location: http://localhost/zuikiai/010/uzduotys/web/u1.php');
     die();
 }
 
