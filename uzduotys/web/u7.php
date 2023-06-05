@@ -2,11 +2,12 @@
 
 $color = $_GET['color'] ?? 'green';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $color = 'yellow';
+    header('Location: http://localhost/zuikiai/010/uzduotys/web/u7.php?color:pink');
+    exit;
 }
 
-//kitas uzrasymas
 //$color =$_SERVER['REQUEST_METHOD'] == 'POST' ? 'yellow : 'green'; 
 
 ?>
@@ -26,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
 
     <fieldset>
-        <form action="http://localhost/zuikiai/010/uzduotys/web/u6.php" method="get">
+        <form action="http://localhost/zuikiai/010/uzduotys/web/u7.php" method="get">
             <div>
                 <label>GET</label>
                 <input type="text">
@@ -40,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <fieldset>
 
-        <form action="http://localhost/zuikiai/010/uzduotys/web/u6.php" method="post">
+        <form action="http://localhost/zuikiai/010/uzduotys/web/u7.php" method="post">
             <div>
                 <label>POST</label>
                 <input type="text">

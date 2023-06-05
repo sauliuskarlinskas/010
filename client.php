@@ -11,4 +11,4 @@ $data[] = ['name' => $name, 'amount' => 0];
 
 require __DIR__ . '/bankWrite.php';
 
-echo "\n $name added\n";
+echo '\n $name added\n';
