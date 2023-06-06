@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <fieldset>
         <legend>GET</legend>
 
-        <form action="http://localhost/zuikiai/010/web/">
+        <form action="http://localhost/zuikiai/010/webPamoka/">
             <div>
                 <label>gyvunas: </label>
                 <input type="text" name="what">
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <fieldset>
             <legend>POST</legend>
 
-            <form action="http://localhost/zuikiai/010/web/" method="post">
+            <form action="http://localhost/zuikiai/010/webPamoka/" method="post">
                 <div>
                     <label>gyvūnas: </label>
                     <input type="text" name="what">

@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +18,6 @@
 </head>
 <body>
     <h1>Home Page</h1>
-    <a href="http://localhost/zuikiai/010/webPamoka/login/login.php">login</a>
+    <?php require __DIR__ . '/menu.php' ?>
 </body>
 </html>

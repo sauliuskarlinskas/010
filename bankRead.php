@@ -1,7 +1,7 @@
 <?php
 defined('GO') || die('no entry');
 
-$jsonfile = file_get_contents(__DIR__ . '/data.json');
+$jsonFile = file_get_contents(__DIR__ . '/data.json');
 
 $dataFromJson = json_decode($jsonFile, 1);
 

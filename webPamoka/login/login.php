@@ -1,7 +1,19 @@
 <?php
 session_start();
 
+if (isset($_SESSION['name']) && !isset($_GET['logout'])) {
+    header('Location: http://localhost/zuikiai/010/webPamoka/login/');
+    die;
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    if (isset($_GET['logout'])) {
+        unset($_SESSION['name']);
+        $_SESSION['error'] = 'Logged out';
+        header('Location: http://localhost/zuikiai/010/webPamoka/login/login.php');
+        die;
+    }
 
     $users = file_get_contents(__DIR__ . '/users.json');
     $users = json_decode($users, 1);
@@ -28,8 +40,6 @@ else {
 
 
 ?>
-
-
 
 
 <!DOCTYPE html>
