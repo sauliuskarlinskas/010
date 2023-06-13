@@ -1,7 +1,7 @@
 <?php
 
 
-class Zveris
+class Zveris extends Miskas
 {
 
 
