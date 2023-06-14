@@ -2,7 +2,7 @@
 
 class KibirasNePo1 extends Kibiras3
 {
-    private $akmenuKiekis;
+    protected $akmenuKiekis;
 
     public function __construct($kiekis = 0)
     {
@@ -13,7 +13,7 @@ class KibirasNePo1 extends Kibiras3
 
     public function prideti1Akmeni(): void
     {
-        $this->akmenuKiekis = rand(2, 5);
+        $this->akmenuKiekis += rand(2, 5);
     }
 
 }
