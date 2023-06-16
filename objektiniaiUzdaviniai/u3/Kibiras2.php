@@ -6,7 +6,7 @@ class Kibiras2
 
     private $akmenuKiekis = 0;
 
-    private static $akmenuKiekisVisuoseKibiruose;
+    static private $akmenuKiekisVisuoseKibiruose;
 
 
 
