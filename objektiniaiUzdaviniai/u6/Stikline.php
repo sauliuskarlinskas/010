@@ -12,8 +12,11 @@ class Stikline
         $this->kiekis = 0;
     }
 
-    public function ipilti($volume): void
+    public function ipilti($volume): void //:self
     {
+        //$this->kiekis = min($this->turis, $this->kiekis +$kiekis); kitas variantas
+        //return $this;
+
         if ($this->turis >= $volume + $this->kiekis) {
 
             $this->kiekis += $volume;

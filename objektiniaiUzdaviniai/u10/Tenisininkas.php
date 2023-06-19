@@ -37,7 +37,7 @@ class Tenisininkas
             if ($this === self::$zaidejas1) {
                 $this->kamuoliukas = false;
                 self::$zaidejas2->kamuoliukas = true;
-                echo 'Kamuoliukas buvo perduotas iš ' . $this->vardas . ', ' . self::$zaidejas2->vardas;
+                echo 'Kamuoliukas buvo perduotas iš ' . $this->vardas . ' į ' . self::$zaidejas2->vardas;
             } else {
                 $this->kamuoliukas = false;
                 self::$zaidejas1->kamuoliukas = true;
